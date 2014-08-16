@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="F:/studyFiles/pj/jar/mysql-connector-java-5.1.0-bin.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://xxxx:3306/momocms" userId="root"
+			password="xxx" />
+		<javaModelGenerator targetPackage="com.xiaohao.cms.model"
+			targetProject="test">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.xiaohao.cms.mapperxml"
+			targetProject="test">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator targetPackage="com.xiaohao.cms.mapper"
+			targetProject="test" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="root" tableName="t_admin" domainObjectName="Admin"> 
+
+		</table>
+		<table schema="root" tableName="t_leave" domainObjectName="Leave">
+
+		</table>
+		<table schema="root" tableName="t_pages" domainObjectName="Pages">
+
+		</table>
+		<table schema="root" tableName="t_product" domainObjectName="Product">
+
+		</table>
+		<table schema="root" tableName="t_product_sub" domainObjectName="ProductSub">
+
+		</table>
+
+	</context>
+</generatorConfiguration>
