@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!--配置数据库方言-->
+   <properties>    
+           <property name="dialect" value="com.ssm.common.mybatis.MySQLDialect"/>    
+   </properties>
+
+
+
+    <mappers>
+        <mapper resource="com/xiaohao/cms/mapper/AdminMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/LeaveMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/PagesMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/ProductMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/ProductSubMapper.xml" />
+    </mappers>
+
+</configuration>
