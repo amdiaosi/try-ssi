@@ -169,14 +169,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- jdbc driver -->
-        <!-- mysql jdbc -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.30</version>
-        </dependency>
-
         <!--添加本地sae环境需要的依赖-->
         <dependency>
             <groupId>javax.mail</groupId>

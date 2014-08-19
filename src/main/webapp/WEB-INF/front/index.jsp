@@ -34,9 +34,10 @@
         </div>
         <nav>
             <ul class="list-none">
-                <c:forEach items="${rootMenus}" var="m">
+                <c:forEach items="${rootMemus}" var="m">
                     <li style="width:124px;" class="">
-                        <a class="active" href="http://lvyou.amdiaosi.com/index.php"><span><c:out value="${m.title}"></c:out></span></a></li>
+                 <a class="active" href="http://lvyou.amdiaosi.com/index.php"><span>
+                       <c:out value="${m.title}"></c:out></span></a></li>
                 </c:forEach>
 
                 <%--<li style="width:124px;" class="">--%>

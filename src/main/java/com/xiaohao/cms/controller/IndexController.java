@@ -4,8 +4,10 @@ import com.xiaohao.cms.model.Pages;
 import com.xiaohao.cms.service.CmsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -22,12 +24,12 @@ public class IndexController {
     @Autowired
     CmsService cmsService;
 
-    @RequestMapping(method = RequestMethod.GET,value = "front/index")
-    public List<Pages> index(){
-
+    @RequestMapping({"/","index.jsp"})
+    public String index(Model modelAndView){
         List<Pages> rootMenus =cmsService.queryForRootMenu();
-
-        return rootMenus;
+        System.out.println(rootMenus.size());
+        modelAndView.addAttribute("rootMemus",rootMenus);
+        return "front/index";
     }
 
 }

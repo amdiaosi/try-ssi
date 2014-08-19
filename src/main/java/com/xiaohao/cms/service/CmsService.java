@@ -26,7 +26,7 @@ public class CmsService extends BaseService {
 
     public List<Pages> queryForRootMenu(){
         PagesExample pagesExample = new PagesExample();
-        pagesExample.createCriteria().andIsmenuNotEqualTo(false).andIssecondarymenuEqualTo(true);
+        pagesExample.createCriteria().andIsmenuEqualTo(true).andIssecondarymenuEqualTo(false);
         return pagesMapper.selectByExample(pagesExample);
     }
 
