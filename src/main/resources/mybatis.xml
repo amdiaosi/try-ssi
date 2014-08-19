@@ -7,7 +7,9 @@
            <property name="dialect" value="com.ssm.common.mybatis.MySQLDialect"/>    
    </properties>
 
-
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
 
     <mappers>
         <mapper resource="com/xiaohao/cms/mapper/AdminMapper.xml" />

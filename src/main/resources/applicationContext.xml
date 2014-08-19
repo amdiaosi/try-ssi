@@ -46,6 +46,11 @@
           p:warnLogCategory="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
     </bean>
 
+    <!--对静态资源文件的访问-->
+    <mvc:resources mapping="/image/**" location="/image/" />
+    <mvc:resources mapping="/javascript/**" location="/javascript/" />
+    <mvc:resources mapping="/css/**" location="/css/" />
+
     <!--配置spring 支持文件上传-->
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:maxUploadSize="50000"></bean>
@@ -75,7 +80,20 @@
        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-
+    <!-- log4jdbc -->
+    <bean id="log4jdbcInterceptor" class="net.sf.log4jdbc.DataSourceSpyInterceptor" />
+    <bean id="dataSourceLog4jdbcAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="interceptorNames">
+            <list>
+                <value>log4jdbcInterceptor</value>
+            </list>
+        </property>
+        <property name="beanNames">
+            <list>
+                <value>dsn</value>
+            </list>
+        </property>
+    </bean>
 
 
 
