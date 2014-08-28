@@ -6,9 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
 import java.util.List;
 
 /**
@@ -19,6 +16,7 @@ import java.util.List;
 @RequestMapping("")
 public class IndexController {
 
+    private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
 
     @Autowired
@@ -27,7 +25,9 @@ public class IndexController {
     @RequestMapping({"/","index.jsp"})
     public String index(Model modelAndView){
         List<Pages> rootMenus =cmsService.queryForRootMenu();
-        System.out.println(rootMenus.size());
+
+        logger.info("查询的分类数据长度 "+rootMenus.size());
+
         modelAndView.addAttribute("rootMemus",rootMenus);
         return "front/index";
     }
