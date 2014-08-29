@@ -1,14 +1,8 @@
 package com.xiaohao.cms.service;
 
-import com.xiaohao.cms.mapper.AdminMapper;
-import com.xiaohao.cms.model.Admin;
-import com.xiaohao.cms.model.AdminExample;
 import com.xiaohao.cms.model.Pages;
 import com.xiaohao.cms.model.PagesExample;
-import org.apache.derby.iapi.store.raw.Page;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.PostConstruct;
 import java.util.List;
 
@@ -24,10 +18,24 @@ public class CmsService extends BaseService {
     }
 
 
+    /**
+     * 查询一级分类
+     * @return
+     */
     public List<Pages> queryForRootMenu(){
         PagesExample pagesExample = new PagesExample();
         pagesExample.createCriteria().andIsmenuEqualTo(true).andIssecondarymenuEqualTo(false);
         return pagesMapper.selectByExample(pagesExample);
+    }
+
+    /**
+     * 查询二级分类
+     * @return
+     */
+    public List<Pages> queryForSecendMenu(){
+        PagesExample example = new PagesExample();
+        example.createCriteria().andPidIsNotNull().andIssecondarymenuEqualTo(true);
+        return pagesMapper.selectByExample(example);
     }
 
 }

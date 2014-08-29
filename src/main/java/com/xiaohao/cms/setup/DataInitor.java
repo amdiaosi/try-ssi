@@ -15,6 +15,6 @@ public class DataInitor extends BaseService {
     @PostConstruct
     void init(){
         //init 逻辑
-
+        System.out.println("init method");
     }
 }

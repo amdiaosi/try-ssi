@@ -90,7 +90,7 @@
         </property>
         <property name="beanNames">
             <list>
-                <value>dsn</value>
+                <value>dataSource</value>
             </list>
         </property>
     </bean>
