@@ -18,27 +18,19 @@ public class IndexController {
 
     private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
-
     @Autowired
     CmsService cmsService;
 
     @RequestMapping({"/","index.action"})
     public String index(Model modelAndView){
         List<Pages> rootMenus =cmsService.queryForRootMenu();
-
         logger.info("查询的分类数据长度 "+rootMenus.size());
-
         List<Pages> secendMenus =cmsService.queryForSecendMenu();
-
-
         modelAndView.addAttribute("rootMenus",rootMenus);
         modelAndView.addAttribute("secendMenus",secendMenus);
         return "front/index";
     }
 
-    @RequestMapping("test")
-    public String test(){
-        return "index";
-    }
+
 
 }

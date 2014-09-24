@@ -17,10 +17,20 @@ public class AccessLogInterceptor implements HandlerInterceptor {
 
     private CmsService cmsService;
 
+    /**
+     * 如果返回false 则另外两个重写的方法就不执行了哈
+     * @param request
+     * @param response
+     * @param handler
+     * @return
+     * @throws Exception
+     */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         logger.info("日志拦截器拦截的url："+request.getRequestURL());
-        return false;
+        logger.info("日志拦截器拦截的uri:"+request.getRequestURI());
+        logger.info("日志拦截器拦截的queryString:"+request.getQueryString());
+        return true;
     }
 
     @Override
@@ -30,7 +40,9 @@ public class AccessLogInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-
+        cmsService.queryForSecendMenu();
+        cmsService.queryForRootMenu();
+        logger.info("日志拦截器中调用cmsservice");
     }
 
     public CmsService getCmsService() {
