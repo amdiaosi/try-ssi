@@ -96,11 +96,11 @@ CREATE TABLE IF NOT EXISTS `t_pages` (
   `author` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `module` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `time` int(4) NOT NULL,
-  `sort` tinyint(1) NOT NULL,
+  `sort` int(4) NOT NULL,
   `isProduct` tinyint(1) NOT NULL,
   `isMenu` tinyint(1) NOT NULL,
   `isSecondaryMenu` tinyint(1) NOT NULL,
-  `pid` tinyint(1) NOT NULL,
+  `pid` int(4) NOT NULL,
   `isNews` tinyint(1) NOT NULL,
   `ext_url` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -137,7 +137,7 @@ INSERT INTO `t_pages` (`id`, `title`, `content`, `author`, `module`, `time`, `so
 CREATE TABLE IF NOT EXISTS `t_product` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `sort` tinyint(1) NOT NULL,
+  `sort` int(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `t_product_sub` (
   `pic` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `category` int(4) NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `sort` tinyint(1) NOT NULL,
+  `sort` int(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
