@@ -492,4 +492,8 @@
       ext_url = #{extUrl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+    <select id="queryListDiy" resultType="com.xiaohao.cms.model.Pages">
+        select * from t_pages
+    </select>
 </mapper>

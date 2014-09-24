@@ -2,10 +2,15 @@ package com.xiaohao.cms.service;
 
 import com.xiaohao.cms.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by xiaohao on 2014/8/18.
  */
+
+
+@Transactional
 public class BaseService {
 
     protected org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());

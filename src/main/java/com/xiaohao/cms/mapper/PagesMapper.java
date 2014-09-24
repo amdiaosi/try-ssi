@@ -117,4 +117,10 @@ public interface PagesMapper {
      * @mbggenerated Sat Aug 16 21:14:11 CST 2014
      */
     int updateByPrimaryKey(Pages record);
+
+    /**
+     *
+     * @return
+     */
+    List queryListDiy();
 }

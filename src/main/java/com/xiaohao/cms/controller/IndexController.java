@@ -36,4 +36,16 @@ public class IndexController {
         return "front/index";
     }
 
+    @RequestMapping("test")
+    public String test(){
+        logger.info("index controller test method");
+        List list =cmsService.queryListDiy();
+        logger.info("list size:"+list.size());
+        for (int i = 0; i < list.size(); i++) {
+            Pages page = (Pages) list.get(i);
+            logger.info(page.getTitle());
+        }
+        return "index";
+    }
+
 }

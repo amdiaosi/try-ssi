@@ -3,6 +3,8 @@ package com.xiaohao.cms.service;
 import com.xiaohao.cms.model.Pages;
 import com.xiaohao.cms.model.PagesExample;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.annotation.PostConstruct;
 import java.util.List;
 
@@ -38,5 +40,10 @@ public class CmsService extends BaseService {
         example.createCriteria().andPidNotEqualTo(false).andIssecondarymenuEqualTo(true);
         return pagesMapper.selectByExample(example);
     }
+
+    public List queryListDiy(){
+        return pagesMapper.queryListDiy();
+    }
+
 
 }
