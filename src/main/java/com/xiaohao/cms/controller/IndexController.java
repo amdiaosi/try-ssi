@@ -28,7 +28,11 @@ public class IndexController {
 
         logger.info("查询的分类数据长度 "+rootMenus.size());
 
-        modelAndView.addAttribute("rootMemus",rootMenus);
+        List<Pages> secendMenus =cmsService.queryForSecendMenu();
+
+
+        modelAndView.addAttribute("rootMenus",rootMenus);
+        modelAndView.addAttribute("secendMenus",secendMenus);
         return "front/index";
     }
 

@@ -28,7 +28,6 @@
 
 		</table>
 		<table schema="root" tableName="t_pages" domainObjectName="Pages">
-
 		</table>
 		<table schema="root" tableName="t_product" domainObjectName="Product">
 

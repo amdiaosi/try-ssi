@@ -34,7 +34,7 @@ public class CmsService extends BaseService {
      */
     public List<Pages> queryForSecendMenu(){
         PagesExample example = new PagesExample();
-        example.createCriteria().andPidIsNotNull().andIssecondarymenuEqualTo(true);
+        example.createCriteria().andPidNotEqualTo(false).andIssecondarymenuEqualTo(true);
         return pagesMapper.selectByExample(example);
     }
 

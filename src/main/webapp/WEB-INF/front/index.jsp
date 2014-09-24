@@ -34,18 +34,29 @@
         </div>
         <nav>
             <ul class="list-none">
-                <c:forEach items="${rootMemus}" var="m">
+                <c:forEach items="${rootMenus}" var="m">
                     <li style="width:124px;" class="">
                  <a class="active" href="http://lvyou.amdiaosi.com/index.php"><span>
-                       <c:out value="${m.title}"></c:out></span></a></li>
+                       <c:out value="${m.title}"></c:out></span></a>
+
+                        <dl style="width: 124px;">
+                            <c:forEach items="${secendMenus}" var="s">
+                                <c:if test="${s.pid eq m.id}">
+                                    <dd><a href="http://lvyou.amdiaosi.com/list.php?id=<c:out value="${s.id}"></c:out>"><c:out value="${s.title}"></c:out></a></dd>
+                                </c:if>
+                            </c:forEach>
+
+                        </dl>
+
+                    </li>
                 </c:forEach>
 
                 <%--<li style="width:124px;" class="">--%>
                     <%--<a class="" href="http://lvyou.amdiaosi.com/list.php?id=5"><span>学校简介</span></a>--%>
-                    <%--<dl style="width: 124px;">--%>
-                        <%--<dd><a href="http://lvyou.amdiaosi.com/list.php?id=19">师资队伍</a></dd>--%>
-                        <%--<dd><a href="http://lvyou.amdiaosi.com/list.php?id=20">合作交流</a></dd>--%>
-                    <%--</dl>--%>
+                    <dl style="width: 124px;">
+                        <dd><a href="http://lvyou.amdiaosi.com/list.php?id=19">师资队伍</a></dd>
+                        <dd><a href="http://lvyou.amdiaosi.com/list.php?id=20">合作交流</a></dd>
+                    </dl>
                 <%--</li>--%>
                 <%--<li style="width:124px;" class="">--%>
                     <%--<a class="" href="http://lvyou.amdiaosi.com/list.php?id=6"><span>校长致辞</span></a>--%>
