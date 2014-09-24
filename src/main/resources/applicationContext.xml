@@ -95,38 +95,16 @@
         </property>
     </bean>
 
-
-
-
-
-
-
-
-    <!--&lt;!&ndash;定义Veloctity 配置&ndash;&gt;-->
-    <!--<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer" p:resourceLoaderPath="WEB-INF/velocity/">-->
-
-    <!--</bean>-->
-    <!--&lt;!&ndash;定义velocity视图解析器&ndash;&gt;-->
-    <!--<bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">-->
-        <!--<property name="cache" value="true"/>-->
-        <!--<property name="prefix" value="/"/>-->
-        <!--<property name="suffix" value=".vm"/>-->
-
-    <!--</bean>-->
-
-
-
-    <!--在MVC的配置文件中，配置拦截器与需要拦截的URL-->
-   <!--<mvc:interceptors>-->
-       <!--<mvc:interceptor>-->
-           <!--<mvc:mapping path="/index.do"/>-->
-           <!--<bean name="myInterceptor" class="com.xiaohao.interceptor.MyInterceptor"></bean>-->
-       <!--</mvc:interceptor>-->
-       <!--<mvc:interceptor>-->
-           <!--<mvc:mapping path="index.do"/>-->
-           <!--<bean name="avoidDuplicateSubmissionInterceptor" class="com.xiaohao.interceptor.AvoidDuplicateSubmissionInterceptor"></bean>-->
-       <!--</mvc:interceptor>-->
-   <!--</mvc:interceptors>-->
+   <mvc:interceptors>
+       <mvc:interceptor>
+           <mvc:mapping path="/*.action"/>
+           <bean name="myInterceptor" class="com.xiaohao.cms.interceptor.AccessLogInterceptor">
+               <property name="cmsService">
+                   <ref bean="cmsService"></ref>
+               </property>
+           </bean>
+       </mvc:interceptor>
+   </mvc:interceptors>
 
    <!--国际化配置-->
     <!--<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">-->
