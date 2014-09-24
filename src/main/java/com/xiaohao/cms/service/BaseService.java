@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Created by xiaohao on 2014/8/18.
  */
 
-
+//这个注解子类可以继承我们可以写到父类上
 @Transactional
 public class BaseService {
 
