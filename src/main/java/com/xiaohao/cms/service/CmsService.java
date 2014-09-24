@@ -25,6 +25,7 @@ public class CmsService extends BaseService {
     public List<Pages> queryForRootMenu(){
         PagesExample pagesExample = new PagesExample();
         pagesExample.createCriteria().andIsmenuEqualTo(true).andIssecondarymenuEqualTo(false);
+        logger.info("查询一级分类");
         return pagesMapper.selectByExample(pagesExample);
     }
 

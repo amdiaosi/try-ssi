@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Created by xiaohao on 2014/8/18.
  */
 public class BaseService {
+
+    protected org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
+
     @Autowired
     protected AdminMapper adminMapper;
     @Autowired
