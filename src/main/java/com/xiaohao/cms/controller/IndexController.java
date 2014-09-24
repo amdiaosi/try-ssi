@@ -22,7 +22,7 @@ public class IndexController {
     @Autowired
     CmsService cmsService;
 
-    @RequestMapping({"/","index.jsp"})
+    @RequestMapping({"/","index.action"})
     public String index(Model modelAndView){
         List<Pages> rootMenus =cmsService.queryForRootMenu();
 
@@ -38,13 +38,6 @@ public class IndexController {
 
     @RequestMapping("test")
     public String test(){
-        logger.info("index controller test method");
-        List list =cmsService.queryListDiy();
-        logger.info("list size:"+list.size());
-        for (int i = 0; i < list.size(); i++) {
-            Pages page = (Pages) list.get(i);
-            logger.info(page.getTitle());
-        }
         return "index";
     }
 

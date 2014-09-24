@@ -58,7 +58,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>*.action</url-pattern>
 	</servlet-mapping>
 	
 	<session-config>
@@ -81,11 +81,6 @@
 		<!--<error-code>403</error-code>-->
 		<!--<location>/WEB-INF/views/error/403.jsp</location>-->
 	<!--</error-page>		-->
-    <jsp-config>
-        <taglib>
-            <taglib-uri>/myTagLib </taglib-uri>
-            <taglib-location>/WEB-INF/myTagLib.tld</taglib-location>
-        </taglib>
-    </jsp-config>
+
 
 </web-app>

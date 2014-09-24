@@ -2,39 +2,47 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<classPathEntry
-		location="F:/studyFiles/pj/jar/mysql-connector-java-5.1.0-bin.jar" />
+		location="D:/dev/repo/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar" />
 	<context id="context1">
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://xxxx:3306/momocms" userId="root"
-			password="xxx" />
+			connectionURL="jdbc:mysql://localhost:3306/momocms" userId="root"
+			password="xiaohao" />
 		<javaModelGenerator targetPackage="com.xiaohao.cms.model"
-			targetProject="test">
+			targetProject="cms">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
-		<sqlMapGenerator targetPackage="com.xiaohao.cms.mapperxml"
-			targetProject="test">
+		<sqlMapGenerator targetPackage="com.xiaohao.cms.mapper"
+			targetProject="cms">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<javaClientGenerator targetPackage="com.xiaohao.cms.mapper"
-			targetProject="test" type="XMLMAPPER">
+			targetProject="cms" type="XMLMAPPER">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table schema="root" tableName="t_admin" domainObjectName="Admin"> 
+		<table schema="root" tableName="t_admin" domainObjectName="Admin">
+			<property name="useActualColumnNames" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 
 		</table>
 		<table schema="root" tableName="t_leave" domainObjectName="Leave">
-
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table schema="root" tableName="t_pages" domainObjectName="Pages">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table schema="root" tableName="t_product" domainObjectName="Product">
-
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table schema="root" tableName="t_product_sub" domainObjectName="ProductSub">
-
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
-
+		<table schema="root" tableName="t_access_log" domainObjectName="AccessLog">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table schema="root" tableName="t_advertising" domainObjectName="ADvertising">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
 	</context>
 </generatorConfiguration>
