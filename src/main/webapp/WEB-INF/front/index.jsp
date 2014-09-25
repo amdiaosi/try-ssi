@@ -30,7 +30,7 @@
         <div class="top-nav list-none">
             <a href="" onclick="" title="收藏本站">收藏本站</a>
             <span> | </span>
-            <a href="http://lvyou.amdiaosi.com/admin" onclick="" title="进入后台">进入后台</a>
+            <a href="adminLogin.action" onclick="" title="进入后台">进入后台</a>
         </div>
         <nav>
             <ul class="list-none">
@@ -51,13 +51,13 @@
                     </li>
                 </c:forEach>
 
-                <%--<li style="width:124px;" class="">--%>
-                    <%--<a class="" href="http://lvyou.amdiaosi.com/list.php?id=5"><span>学校简介</span></a>--%>
+                <li style="width:124px;" class="">
+                    <a class="" href="showProductList.action"><span>学校简介</span></a>
                     <dl style="width: 124px;">
                         <dd><a href="http://lvyou.amdiaosi.com/list.php?id=19">师资队伍</a></dd>
                         <dd><a href="http://lvyou.amdiaosi.com/list.php?id=20">合作交流</a></dd>
                     </dl>
-                <%--</li>--%>
+                </li>
                 <%--<li style="width:124px;" class="">--%>
                     <%--<a class="" href="http://lvyou.amdiaosi.com/list.php?id=6"><span>校长致辞</span></a>--%>
                     <%--<dl style="width: 124px;">--%>

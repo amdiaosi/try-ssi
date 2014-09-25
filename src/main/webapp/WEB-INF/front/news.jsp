@@ -1,3 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
@@ -150,7 +154,7 @@ style.firebugResetStyles {
 <header>
   <div class="inner headtop">
   <div class="pp">
-  	<a href="http://lvyou.amdiaosi.com/" title="MoMoCMS" id="web_logo"> <img src="liuyan_files/logo.gif" alt="MoMoCMS" title="MoMoCMS" border="0"> </a>
+  	<a href="http://lvyou.amdiaosi.com/" title="MoMoCMS" id="web_logo"> <img src="image/logo.gif" alt="MoMoCMS" title="MoMoCMS" border="0"> </a>
   </div>
    <div class="top-nav list-none">
       	<a href="" onclick="" title="设为首页">设为首页</a>
@@ -174,7 +178,7 @@ style.firebugResetStyles {
 		   					   			</dl>
 		   		   				   			</li>
    		   			<li style="width:124px;" class="">
-   				<a class="" href="http://lvyou.amdiaosi.com/list.php?id=15"><span>苏大新闻</span></a>
+   				<a class="active" href="http://lvyou.amdiaosi.com/list.php?id=15"><span>苏大新闻</span></a>
    				   				   			</li>
    		   			<li style="width:124px;" class="">
    				<a class="" href="http://lvyou.amdiaosi.com/list.php?id=7"><span>产品介绍</span></a>
@@ -185,7 +189,7 @@ style.firebugResetStyles {
 		   					   			</dl>
 		   		   			</li>
    		   			<li style="width:124px;" class="">
-   				<a class="active" href="http://lvyou.amdiaosi.com/list.php?id=16"><span>留言咨询</span></a>
+   				<a class="" href="http://lvyou.amdiaosi.com/list.php?id=16"><span>留言咨询</span></a>
    				   				   			</li>
    		   			<li style="width:124px;" class="">
    				<a class="" href="http://bbs.youyax.com/"><span>论坛交流</span></a>
@@ -202,13 +206,13 @@ style.firebugResetStyles {
 
 <div class="banner slider-wrapper theme-default">
     <div id="slider" class="nivoSlider">
-<img style="width: 1000px; visibility: hidden; display: inline;" src="liuyan_files/1404805819_0.jpg" data-thumb="image/1404805819_0.jpg" alt="">
-<img style="width: 1000px; visibility: hidden; display: inline;" src="liuyan_files/1404805827_0.jpg" data-thumb="image/1404805827_0.jpg" alt="">
-<img style="width: 1000px; visibility: hidden; display: inline;" src="liuyan_files/1404805836_0.jpg" data-thumb="image/1404805836_0.jpg" alt="">
-<img style="width: 1000px; visibility: hidden; display: inline;" src="liuyan_files/1404807955_0.jpg" data-thumb="image/1404807955_0.jpg" alt="">
-<img style="width: 1000px; visibility: hidden; display: inline;" src="liuyan_files/1406361263_0.jpg" data-thumb="image/1406361263_0.jpg" alt="">
+<img style="width: 1000px; visibility: hidden; display: inline;" src="image/1404805819_0.jpg" data-thumb="./resource/slide/images/1404805819_0.jpg" alt="">
+<img style="width: 1000px; visibility: hidden; display: inline;" src="image/1404805827_0.jpg" data-thumb="./resource/slide/images/1404805827_0.jpg" alt="">
+<img style="width: 1000px; visibility: hidden; display: inline;" src="image/1404805836_0.jpg" data-thumb="./resource/slide/images/1404805836_0.jpg" alt="">
+<img style="width: 1000px; visibility: hidden; display: inline;" src="image/1404807955_0.jpg" data-thumb="./resource/slide/images/1404807955_0.jpg" alt="">
+<img style="width: 1000px; visibility: hidden; display: inline;" src="image/1406361263_0.jpg" data-thumb="./resource/slide/images/1406361263_0.jpg" alt="">
  
-    <img style="display: inline; width: 1000px; height: 400px;" src="liuyan_files/1404805836_0.jpg" class="nivo-main-image"><div class="nivo-caption"></div><div class="nivo-directionNav"><a class="nivo-prevNav">Prev</a><a class="nivo-nextNav">Next</a></div><div style="left: 0px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="0"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-0px;"></div><div style="left: 67px; width: 67px; height: 400px; opacity: 1; overflow: hidden; bottom: 0px;" class="nivo-slice" name="1"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-67px;"></div><div style="left: 134px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="2"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-134px;"></div><div style="left: 201px; width: 67px; height: 400px; opacity: 1; overflow: hidden; bottom: 0px;" class="nivo-slice" name="3"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-201px;"></div><div style="left: 268px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="4"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-268px;"></div><div style="left: 335px; width: 67px; height: 400px; opacity: 1; overflow: hidden; bottom: 0px;" class="nivo-slice" name="5"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-335px;"></div><div style="left: 402px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="6"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-402px;"></div><div style="left: 469px; width: 67px; height: 400px; opacity: 1; overflow: hidden; bottom: 0px;" class="nivo-slice" name="7"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-469px;"></div><div style="left: 536px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="8"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-536px;"></div><div style="left: 603px; width: 67px; height: 400px; opacity: 1; overflow: hidden; bottom: 0px;" class="nivo-slice" name="9"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-603px;"></div><div style="left: 670px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="10"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-670px;"></div><div style="left: 737px; width: 67px; height: 400px; opacity: 1; overflow: hidden; bottom: 0px;" class="nivo-slice" name="11"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-737px;"></div><div style="left: 804px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="12"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-804px;"></div><div style="left: 871px; width: 67px; height: 400px; opacity: 1; overflow: hidden; bottom: 0px;" class="nivo-slice" name="13"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-871px;"></div><div style="left: 938px; width: 62px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="14"><img src="liuyan_files/1404805836_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-938px;"></div></div>
+    <img style="display: inline; height: 400px;" src="image/1404805819_0.jpg" class="nivo-main-image"><div class="nivo-caption"></div><div class="nivo-directionNav"><a class="nivo-prevNav">Prev</a><a class="nivo-nextNav">Next</a></div><div style="left: 0px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="0"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-0px;"></div><div style="left: 67px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="1"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-67px;"></div><div style="left: 134px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="2"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-134px;"></div><div style="left: 201px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="3"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-201px;"></div><div style="left: 268px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="4"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-268px;"></div><div style="left: 335px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="5"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-335px;"></div><div style="left: 402px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="6"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-402px;"></div><div style="left: 469px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="7"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-469px;"></div><div style="left: 536px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="8"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-536px;"></div><div style="left: 603px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="9"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-603px;"></div><div style="left: 670px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="10"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-670px;"></div><div style="left: 737px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="11"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-737px;"></div><div style="left: 804px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="12"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-804px;"></div><div style="left: 871px; width: 67px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="13"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-871px;"></div><div style="left: 938px; width: 62px; height: 400px; opacity: 1; overflow: hidden; top: 0px;" class="nivo-slice" name="14"><img src="image/1404805819_0.jpg" style="position:absolute; width:1000px; height:auto; display:block !important; top:0; left:-938px;"></div></div>
 </div>
 <script type="text/javascript">
     $(window).load(function() {
@@ -240,44 +244,13 @@ style.firebugResetStyles {
       	<div id="main_content">
       		<ol class="breadcrumb">
                  <li><a href="http://lvyou.amdiaosi.com/">主页</a></li>
-			   <li><a href="http://lvyou.amdiaosi.com/list.php?id=16">留言咨询</a></li>
-			   			   			   		              </ol>
+			   <li><a href="http://lvyou.amdiaosi.com/list.php?id=15">苏大新闻</a></li>
+			   			   			   		<li>第八届海内外华人神经科学家研讨会（SCNW 2014） 在苏召开</li>              </ol>
               <p></p>
-              <script>
-function check(){
-	var error='';
-	if(document.forms['form'].user.value==''){
-		error+='留言人必填\r\n';
-	}if(document.forms['form'].leave_txt.value==''){
-		error+='留言内容必填\r\n';
-	}
-	if(error==''){
-		return true;	
-	}else{
-		alert(error);
-		return false;	
-	}
-}
-</script>
-<form name="form" action="" method="post" onsubmit="return check()">
-	<input class="half" name="user" placeholder="留言人" type="text">
-	<br>
-	<textarea name="leave_txt" cols="60" rows="5" placeholder="最多为100个字符"></textarea>
-	<br>
-	<input name="sub" class="btn" value="留言" type="submit">
-</form>
-<br>
-<div class="box">
-			<div style="font-weight:bold;border-bottom:1px dashed #333;margin-top:10px;">哆啦A梦 <span style="margin:0 10px;font-weight:normal;">咨询于</span> 2014-07-08 15:21:14		<p>这是第四条</p>
-					<span style="background: #FFF1F1;display: inline-block;padding: 0 10px;">
-				<p>管理员回复 <span style="margin:0 10px;font-weight:normal;">回复于</span> 2014-07-08 15:23:07</p>
-				<p>收到，谢谢</p>
-			</span>
-				</div>
-				<div style="font-weight:bold;border-bottom:1px dashed #333;margin-top:10px;">哆啦A梦 <span style="margin:0 10px;font-weight:normal;">咨询于</span> 2014-07-08 14:44:17		<p>再来一条
-呵呵！！</p>
-				</div>
-		</div>      	</div>
+              <div style="text-align:center"><p><span style="font-weight:bold;">admin</span><span style="font-weight:normal;margin:0 10px;">发表于</span><span style="font-weight:bold;">2014-07-08 13:16:51</span></p></div><p></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">6月24日-28日，第八届海内外神经科学家研讨会在苏州南园宾馆开幕。本次大会由中国神经科学会主办，苏州大学承办，海内外近300位神经科学领域的专家教授和学生学者参加了本次大会。我校神经科学研究所副所长徐广银教授担任大会执行主席，并主持了大会开幕式。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/2014063016590668668.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">中国神经科学会秘书长何士刚致欢迎词，我校副校长蒋星红代表苏州大学向本次大会的来宾表示热烈欢迎，复旦大学杨雄里院士也为本次大会的胜利召开表示祝贺。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630165989248924.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170060876087.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170048864886.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">为
+期3天研讨会采取美国Gordon会议的模式，会议报告人必须是独立的实验室负责人或PI，大部分会议报告人由组委会邀请，少部分则从自由申请者中择优选
+出。会议共分为十个专题，每个专题都包含国外和国内的专家，共54个大会报告。我校神经科学研究所刘春风教授、徐广银教授、刘耀波教授也先后在大会上做了
+精彩报告。会议还吸引了很多年轻专家和学生代表通过递交Poster的形式参会。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170013171317.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">为了鼓励广大青年学生学者更好地投入到神经科学研究领域，本次会议期间还组织了优秀墙报评审活动，会议共评选了6份优秀墙报，我校徐广银教授的博士研究生周友浪同学也名列其中。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170085408540.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">本次研讨会为神经科学研究领域的华人科学家们和学者提供了宽广的交流合作平台。</span></p><p><br></p><p></p>      	</div>
       </div>
       
       <div class="index-link linkx inner">
