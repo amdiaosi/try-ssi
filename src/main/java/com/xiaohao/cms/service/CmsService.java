@@ -1,8 +1,6 @@
 package com.xiaohao.cms.service;
 
-import com.xiaohao.cms.model.AccessLog;
-import com.xiaohao.cms.model.Pages;
-import com.xiaohao.cms.model.PagesExample;
+import com.xiaohao.cms.model.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -47,6 +45,11 @@ public class CmsService extends BaseService {
      */
     public void insertAccessLog(AccessLog log){
         accessLogMapper.insert(log);
+    }
+
+    public List<Product> queryProductCate(){
+        ProductExample productExample = new ProductExample();
+        return productMapper.selectByExample(productExample);
     }
 
 }

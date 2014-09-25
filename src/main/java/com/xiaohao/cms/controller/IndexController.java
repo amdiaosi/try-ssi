@@ -14,23 +14,21 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("")
-public class IndexController {
+public class IndexController extends BaseController {
 
     private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
-    @Autowired
-    CmsService cmsService;
+
 
     @RequestMapping({"/","index.action"})
     public String index(Model modelAndView){
-        List<Pages> rootMenus =cmsService.queryForRootMenu();
-        logger.info("查询的分类数据长度 "+rootMenus.size());
-        List<Pages> secendMenus =cmsService.queryForSecendMenu();
-        modelAndView.addAttribute("rootMenus",rootMenus);
-        modelAndView.addAttribute("secendMenus",secendMenus);
         return "front/index";
     }
 
-
+    @RequestMapping("/renderHeader.action")
+    public String renderHeaderTool(Model modelAndView){
+        renderHeader(modelAndView);
+        return "common/header";
+    }
 
 }
