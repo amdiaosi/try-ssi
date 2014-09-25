@@ -29,4 +29,8 @@ public class BaseService {
     protected AccessLogMapper accessLogMapper;
     @Autowired
     protected ADvertisingMapper aDvertisingMapper;
+    @Autowired
+    protected MixMapper mixMapper;
+    @Autowired
+    protected MixSidebarMapper mixSidebarMapper;
 }

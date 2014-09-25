@@ -13,6 +13,7 @@ import java.util.List;
 @Service
 public class CmsService extends BaseService {
 
+
     @PostConstruct
     public void init(){
 
@@ -36,6 +37,7 @@ public class CmsService extends BaseService {
      */
     public List<Pages> queryForSecendMenu(){
         PagesExample example = new PagesExample();
+        example.createCriteria().andIsmenuEqualTo(true).andIssecondarymenuEqualTo(true);
         return pagesMapper.selectByExample(example);
     }
 
@@ -61,5 +63,64 @@ public class CmsService extends BaseService {
     public Pages queryPageById(Integer id){
         return pagesMapper.selectByPrimaryKey(id);
     }
+
+    /**
+     * 插入留言
+     * @param leave
+     */
+    public void insertLeave(LeaveWithBLOBs leave){
+         leaveMapper.insert(leave);
+    }
+
+    /**
+     * 查询顶部小导航
+     * @return
+     */
+    public List<Mix> queryHeadMix(){
+        MixExample example = new MixExample();
+        example.createCriteria().andPidEqualTo(1);
+        return mixMapper.selectByExample(example);
+    }
+
+    /**
+     * 查询友情小导航
+     * @return
+     */
+    public List<Mix> queryFriendMix(){
+        MixExample example = new MixExample();
+        example.createCriteria().andPidEqualTo(2);
+        return mixMapper.selectByExample(example);
+    }
+
+    /**
+     * 查询友情小导航
+     * @return
+     */
+    public List<Mix> queryFooterMix(){
+        MixExample example = new MixExample();
+        example.createCriteria().andPidEqualTo(3);
+        return mixMapper.selectByExample(example);
+    }
+
+    /**
+     * 查询非产品的pages列表
+     * @return
+     */
+    public List<Pages> queryPagesIsNotProduct(){
+        PagesExample example =new PagesExample();
+        example.createCriteria().andIsproductEqualTo(false);
+        return pagesMapper.selectByExample(example);
+    }
+
+    /**
+     * 查询产品的pages列表
+     * @return
+     */
+    public List<Pages> queryPagesIsProduct(){
+        PagesExample example = new PagesExample();
+        example.createCriteria().andIsproductEqualTo(true);
+        return pagesMapper.selectByExample(example);
+    }
+
 
 }
