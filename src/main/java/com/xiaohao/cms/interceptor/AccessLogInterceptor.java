@@ -1,5 +1,6 @@
 package com.xiaohao.cms.interceptor;
 
+import com.xiaohao.cms.model.AccessLog;
 import com.xiaohao.cms.service.CmsService;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,6 +29,16 @@ public class AccessLogInterceptor implements HandlerInterceptor {
         logger.info("日志拦截器拦截的url："+request.getRequestURL());
         logger.info("日志拦截器拦截的uri:"+request.getRequestURI());
         logger.info("日志拦截器拦截的queryString:"+request.getQueryString());
+
+        AccessLog accessLog =new AccessLog();
+        accessLog.setIp(request.getRemoteAddr());
+        if(request.getQueryString()!=null){
+            accessLog.setName(request.getRequestURL()+"?"+request.getQueryString());
+        }else {
+            accessLog.setName(request.getRequestURL().toString());
+        }
+        accessLog.setTime(1);
+        cmsService.insertAccessLog(accessLog);
         return true;
     }
 
@@ -38,9 +49,9 @@ public class AccessLogInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        cmsService.queryForSecendMenu();
-        cmsService.queryForRootMenu();
-        logger.info("日志拦截器中调用cmsservice");
+        if(ex!=null){
+
+        }
     }
 
     public CmsService getCmsService() {

@@ -25,4 +25,8 @@ public class BaseService {
     protected ProductMapper productMapper;
     @Autowired
     protected ProductSubMapper productSubMapper;
+    @Autowired
+    protected AccessLogMapper accessLogMapper;
+    @Autowired
+    protected ADvertisingMapper aDvertisingMapper;
 }

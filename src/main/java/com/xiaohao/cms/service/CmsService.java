@@ -1,5 +1,7 @@
 package com.xiaohao.cms.service;
 
+import com.xiaohao.cms.mapper.AccessLogMapper;
+import com.xiaohao.cms.model.AccessLog;
 import com.xiaohao.cms.model.Pages;
 import com.xiaohao.cms.model.PagesExample;
 import org.springframework.stereotype.Service;
@@ -41,5 +43,12 @@ public class CmsService extends BaseService {
     }
 
 
+    /**
+     * 记录accessLog日志
+     * @param log
+     */
+    public void insertAccessLog(AccessLog log){
+        accessLogMapper.insert(log);
+    }
 
 }
