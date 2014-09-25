@@ -44,5 +44,11 @@
 		<table schema="root" tableName="t_advertising" domainObjectName="ADvertising">
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
+		<table schema="root" tableName="t_mix" domainObjectName="Mix">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table schema="root" tableName="t_mix_sidebar" domainObjectName="MixSidebar">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
 	</context>
 </generatorConfiguration>

@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("")
 public class IndexController extends BaseController {
 
-    private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
+
 
 
 
