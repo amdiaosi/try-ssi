@@ -1,11 +1,9 @@
 package com.xiaohao.cms.service;
 
-import com.xiaohao.cms.mapper.AccessLogMapper;
 import com.xiaohao.cms.model.AccessLog;
 import com.xiaohao.cms.model.Pages;
 import com.xiaohao.cms.model.PagesExample;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 import java.util.List;

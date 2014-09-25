@@ -37,7 +37,7 @@ public class AccessLogInterceptor implements HandlerInterceptor {
         }else {
             accessLog.setName(request.getRequestURL().toString());
         }
-        accessLog.setTime(1);
+        accessLog.setTime(System.currentTimeMillis());
         cmsService.insertAccessLog(accessLog);
         return true;
     }

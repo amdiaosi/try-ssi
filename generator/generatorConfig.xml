@@ -22,7 +22,7 @@
 		</javaClientGenerator>
 
 		<table schema="root" tableName="t_admin" domainObjectName="Admin">
-			<property name="useActualColumnNames" value="true" />
+
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 
 		</table>
