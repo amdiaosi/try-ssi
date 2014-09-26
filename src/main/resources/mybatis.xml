@@ -17,6 +17,11 @@
         <mapper resource="com/xiaohao/cms/mapper/PagesMapper.xml" />
         <mapper resource="com/xiaohao/cms/mapper/ProductMapper.xml" />
         <mapper resource="com/xiaohao/cms/mapper/ProductSubMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/MixMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/MixSidebarMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/LeaveMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/ADvertisingMapper.xml" />
+        <mapper resource="com/xiaohao/cms/mapper/AccessLogMapper.xml" />
     </mappers>
 
 </configuration>

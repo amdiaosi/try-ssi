@@ -117,4 +117,11 @@ public interface PagesMapper {
      * @mbggenerated Fri Sep 26 10:03:16 CST 2014
      */
     int updateByPrimaryKey(Pages record);
+
+    /**
+     * 添加分页条件的查询
+     * @param example
+     * @return
+     */
+    List<Pages> selectByExampleWithBLOBsLimit(PagesExample example);
 }

@@ -122,5 +122,28 @@ public class CmsService extends BaseService {
         return pagesMapper.selectByExample(example);
     }
 
+    /**
+     * 查询topN的新闻列表
+     * @param topN
+     * @return
+     */
+    public List<Pages> queryPagesNewsTopN(Integer topN){
+        PagesExample example = new PagesExample();
+        example.createCriteria().andIsnewsEqualTo(true);
+        LimitClause limitClause = new LimitClause(0,topN);
+        example.setLimitClause(limitClause);
+        return pagesMapper.selectByExampleWithBLOBsLimit(example);
+    }
+
+    /**
+     * 查询首页展示的滚动product
+     * @return
+     */
+    public List<ProductSub> queryIndexProductScroll(){
+        ProductSubExample example = new ProductSubExample();
+        //这里数据库需要添加标记首页推荐的商品标示
+        //example.createCriteria().andCategoryBetween("");
+        return productSubMapper.selectByExample(example);
+    }
 
 }

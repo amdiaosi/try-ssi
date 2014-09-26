@@ -24,7 +24,61 @@
 </head>
 <body style="height: 100%;">
 <header>
+    <div class="inner headtop">
+        <div class="pp">
+            <a href="http://lvyou.amdiaosi.com/" title="MoMoCMS" id="web_logo"> <img src="image/logo.gif" alt="MoMoCMS"
+                                                                                     title="MoMoCMS" border="0"> </a>
+        </div>
+        <div class="top-nav list-none">
 
+            <c:forEach items="${headerLinks}" varStatus="s" var="link">
+
+                <a href="${link.value}" onclick="" title="${link.name}">${link.name}</a>
+                <c:if test="${!s.last}">
+                    <span> | </span>
+                </c:if>
+
+            </c:forEach>
+
+
+        </div>
+        <nav>
+            <ul class="list-none">
+                <c:forEach items="${rootMenus}" var="m">
+                    <li style="width:124px;" class="">
+                        <a class="active" href="http://lvyou.amdiaosi.com/index.php"><span>
+                       <c:out value="${m.title}"></c:out></span></a>
+
+                        <dl style="width: 124px;">
+                            <c:if test="${m.isproduct}">
+                                <c:forEach items="${products}" var="s">
+                                    <dd><a href="show.action?id=<c:out value="${s.id}"></c:out>"><c:out value="${s.name}"></c:out></a></dd>
+                                </c:forEach>
+                            </c:if>
+                            <c:if test="${!m.isproduct}">
+                                <c:forEach items="${secendMenus}" var="s">
+                                    <c:if test="${s.pid == m.id}">
+                                        <dd><a href="show.action?id=<c:out value="${s.id}"></c:out>"><c:out value="${s.title}"></c:out></a></dd>
+                                    </c:if>
+                                </c:forEach>
+                            </c:if>
+
+                        </dl>
+
+                    </li>
+                </c:forEach>
+
+                <li style="width:124px;" class="">
+                    <a class="" href="showProductList.action"><span>学校简介</span></a>
+                    <dl style="width: 124px;">
+                        <dd><a href="http://lvyou.amdiaosi.com/list.php?id=19">师资队伍</a></dd>
+                        <dd><a href="http://lvyou.amdiaosi.com/list.php?id=20">合作交流</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
 </header>
 <div class="banner slider-wrapper theme-default">
     <div id="slider" class="nivoSlider">
@@ -135,32 +189,13 @@
                 <div class="tx" style="height: 224px;">
                     <div>
                         <ol class="list-none metlist">
-                            <li class="list top">
-                                <span class="time">2014-07-08</span>
-                                <a href="http://lvyou.amdiaosi.com/list.php?id=15&amp;nid=14"
-                                   title="第八届海内外华人神经科学家研讨会（SCNW 2014） 在苏召开" target="_self">第八届海内外华人神经科学家研讨会（SCNW 2014）
-                                    在苏召开</a>
-                            </li>
-                            <li class="list top">
-                                <span class="time">2014-07-08</span>
-                                <a href="http://lvyou.amdiaosi.com/list.php?id=15&amp;nid=13"
-                                   title="我校隆重召开纪念建党93周年暨党内表彰大会" target="_self">我校隆重召开纪念建党93周年暨党内表彰大会</a>
-                            </li>
-                            <li class="list top">
-                                <span class="time">2014-07-08</span>
-                                <a href="http://lvyou.amdiaosi.com/list.php?id=15&amp;nid=12"
-                                   title="我校与意大利多莫斯设计学院签署国际合作与交流协议" target="_self">我校与意大利多莫斯设计学院签署国际合作与交流协议</a>
-                            </li>
-                            <li class="list top">
-                                <span class="time">2014-07-08</span>
-                                <a href="http://lvyou.amdiaosi.com/list.php?id=15&amp;nid=11"
-                                   title="我校举行2014年暑期社会实践出征仪式" target="_self">我校举行2014年暑期社会实践出征仪式</a>
-                            </li>
-                            <li class="list top">
-                                <span class="time">2014-07-08</span>
-                                <a href="http://lvyou.amdiaosi.com/list.php?id=15&amp;nid=10" title="我校召开通识教育课程改革专题研讨会"
-                                   target="_self">我校召开通识教育课程改革专题研讨会</a>
-                            </li>
+                           <c:forEach items="${top5News}" var="news">
+                               <li class="list top">
+                                   <span class="time"><c:out value="${news.dateFormat}"></c:out> </span>
+                                   <a href="show.action?id=${news.id}&amp;nid=14"
+                                      title="<c:out value="${news.title}"></c:out>" target="_self"><c:out value="${news.title}"></c:out> </a>
+                               </li>
+                           </c:forEach>
                         </ol>
                     </div>
                 </div>
@@ -205,66 +240,10 @@
             </div>
             <div id="move"
                  style="width: 962px; margin-left: 20px; margin-right: 20px; font-family: 'Microsoft YaHei',微软雅黑,Arial,Helvetica,sans-serif; height: 130px; overflow: hidden;">
-                <table id="scrollimg" border="0" cellpadding="0" cellspacing="0" height="130" width="962">
-                    <tbody>
-                    <tr>
-                        <td id="simg1">
-                            <table border="0" cellpadding="0" cellspacing="0" height="130" width="962">
-                                <tbody>
-                                <tr>
-                                    <td><a href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=5"><img
-                                            src="image/1407997819_0.jpg"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=9"><img
-                                            src="image/1404781508_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=8"><img
-                                            src="image/1404781100_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=7"><img
-                                            src="image/1404781049_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=6"><img
-                                            src="image/1404780981_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=10"><img
-                                            src="image/1404789020_0.jpg"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td id="simg2">
-                            <table border="0" cellpadding="0" cellspacing="0" height="130" width="962">
-                                <tbody>
-                                <tr>
-                                    <td><a href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=5"><img
-                                            src="image/1407997819_0.jpg"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=9"><img
-                                            src="image/1404781508_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=8"><img
-                                            src="image/1404781100_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=7"><img
-                                            src="image/1404781049_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=6"><img
-                                            src="image/1404780981_0.png"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a><a
-                                            href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=10"><img
-                                            src="image/1404789020_0.jpg"
-                                            style="margin-right:40px;width:160px;height:130px;" border="0"></a></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+
             </div>
-            <script type="text/javascript">Move_level("move", 962, 130, '<a href="list.php?id=7&sid=5"><img src="image/1407997819_0.jpg" border="0" style="margin-right:40px;width:160px;height:130px;"></a><a href="list.php?id=7&sid=9"><img src="image/1404781508_0.png" border="0" style="margin-right:40px;width:160px;height:130px;"></a><a href="list.php?id=7&sid=8"><img src="image/1404781100_0.png" border="0" style="margin-right:40px;width:160px;height:130px;"></a><a href="list.php?id=7&sid=7"><img src="image/1404781049_0.png" border="0" style="margin-right:40px;width:160px;height:130px;"></a><a href="list.php?id=7&sid=6"><img src="image/1404780981_0.png" border="0" style="margin-right:40px;width:160px;height:130px;"></a><a href="list.php?id=7&sid=10"><img src="image/1404789020_0.jpg" border="0" style="margin-right:40px;width:160px;height:130px;"></a>');</script>
+            <script type="text/javascript">
+                Move_level("move", 962, 130, '<c:forEach items="${productListScroll}" var="product"><a href="http://lvyou.amdiaosi.com/list.php?id=7&amp;sid=5"><img src="${product.pic}" style="margin-right:40px;width:160px;height:130px;" border="0"></a></c:forEach>');</script>
 
 
             <div class="index-link linkx inner">
@@ -272,8 +251,10 @@
 
                 <div class="txt" style="width: 883px;">
                     <ul class="list-none">
-                        <li><a href="http://www.youyax.com/" target="_blank" title="">YouYaX开源论坛</a></li>
-                        <li><a href="http://pmb.youyax.com/" target="_blank" title="">PMB通信系统</a></li>
+                        <c:forEach var="link" varStatus="s" items="${friendLinks}">
+                            <li><a href="${link.value}" target="_blank" title="${link.name}">${link.name}</a></li>
+            </c:forEach>
+
                     </ul>
                 </div>
             </div>
@@ -286,8 +267,15 @@
 <footer>
     <div class="inner">
         <div class="foot-nav">
-            <a href="" 0="" title="">栏目1</a><span>|</span>
-            <a href="" 0="" title="">栏目2</a>
+            <c:forEach var="link" varStatus="s" items="${footerLinks}">
+                <a href="${link.value}" target="_blank" title="${link.name}">
+                    <c:out value="${link.name}"></c:out>
+                </a><span>
+                <c:if test="${!s.last}">
+               <span> |</span>
+                </c:if>
+            </c:forEach>
+
         </div>
         <div class="foot-text">
             <p>Powered BY YouYaX<br>MoMoCMS，更好用的企业建站系统</p>

@@ -243,25 +243,34 @@ style.firebugResetStyles {
       <div id="main">
       	<div id="main_content">
       		<ol class="breadcrumb">
-                 <li><a href="http://lvyou.amdiaosi.com/">主页</a></li>
-			   <li><a href="http://lvyou.amdiaosi.com/list.php?id=15">苏大新闻</a></li>
-			   			   			   		<li>第八届海内外华人神经科学家研讨会（SCNW 2014） 在苏召开</li>              </ol>
+                 <li><a href="index.action">主页</a></li>
+			   <li><a href="show.action?id=15">苏大新闻</a></li>
+			   			   			   		<li><c:out value="${pages.title}"></c:out></li>              </ol>
               <p></p>
-              <div style="text-align:center"><p><span style="font-weight:bold;">admin</span><span style="font-weight:normal;margin:0 10px;">发表于</span><span style="font-weight:bold;">2014-07-08 13:16:51</span></p></div><p></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">6月24日-28日，第八届海内外神经科学家研讨会在苏州南园宾馆开幕。本次大会由中国神经科学会主办，苏州大学承办，海内外近300位神经科学领域的专家教授和学生学者参加了本次大会。我校神经科学研究所副所长徐广银教授担任大会执行主席，并主持了大会开幕式。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/2014063016590668668.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">中国神经科学会秘书长何士刚致欢迎词，我校副校长蒋星红代表苏州大学向本次大会的来宾表示热烈欢迎，复旦大学杨雄里院士也为本次大会的胜利召开表示祝贺。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630165989248924.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170060876087.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170048864886.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">为
-期3天研讨会采取美国Gordon会议的模式，会议报告人必须是独立的实验室负责人或PI，大部分会议报告人由组委会邀请，少部分则从自由申请者中择优选
-出。会议共分为十个专题，每个专题都包含国外和国内的专家，共54个大会报告。我校神经科学研究所刘春风教授、徐广银教授、刘耀波教授也先后在大会上做了
-精彩报告。会议还吸引了很多年轻专家和学生代表通过递交Poster的形式参会。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170013171317.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">为了鼓励广大青年学生学者更好地投入到神经科学研究领域，本次会议期间还组织了优秀墙报评审活动，会议共评选了6份优秀墙报，我校徐广银教授的博士研究生周友浪同学也名列其中。</span></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; "><img src="image/20140630170085408540.jpg" alt=""></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); "><br></p><p style="font-family: 宋体; font-size: 14px; color: rgb(36, 33, 29); line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255); text-indent: 2em; "><span style="font-size: 16px; ">本次研讨会为神经科学研究领域的华人科学家们和学者提供了宽广的交流合作平台。</span></p><p><br></p><p></p>      	</div>
+              <div style="text-align:center">
+                  <p><span style="font-weight:bold;">${pages.author}</span>
+                      <span style="font-weight:normal;margin:0 10px;">发表于</span>
+                      <span style="font-weight:bold;">${pages.dateFormat}</span>
+                  </p>
+              </div>
+            <p></p>
+                <c:out value="${pages.content}" escapeXml="false"></c:out>
+            <p></p>
+        </div>
       </div>
-      
-      <div class="index-link linkx inner">
-        <h3 class="title png"> 友情链接:</h3>
-        <div class="txt" style="width: 883px;">
-	        	<ul class="list-none">
-				<li><a href="http://www.youyax.com/" target="_blank" title="">YouYaX开源论坛</a></li>
-				<li><a href="http://pmb.youyax.com/" target="_blank" title="">PMB通信系统</a></li>
-			</ul>
-		</div>
-      </div>
+
+        <div class="index-link linkx inner">
+            <h3 class="title png"> 友情链接:</h3>
+
+            <div class="txt" style="width: 883px;">
+                <ul class="list-none">
+                    <c:forEach var="link" varStatus="s" items="${friendLinks}">
+                        <li><a href="${link.value}" target="_blank" title="${link.name}">${link.name}</a></li>
+                    </c:forEach>
+
+                </ul>
+            </div>
+        </div>
       
     </div>
   </div>
@@ -269,14 +278,21 @@ style.firebugResetStyles {
 
 
 <footer>
-	<div class="inner">
-		<div class="foot-nav">
-			<a href="" 0="" title="">栏目1</a><span>|</span>
-			<a href="" 0="" title="">栏目2</a>
-		</div>			
-		<div class="foot-text">
-			<p>Powered BY YouYaX<br>MoMoCMS，更好用的企业建站系统</p>
-		</div>
-	</div>
+    <div class="inner">
+        <div class="foot-nav">
+            <c:forEach var="link" varStatus="s" items="${footerLinks}">
+            <a href="${link.value}" target="_blank" title="${link.name}">
+                <c:out value="${link.name}"></c:out>
+            </a><span>
+                <c:if test="${!s.last}">
+               <span> |</span>
+                </c:if>
+            </c:forEach>
+
+        </div>
+        <div class="foot-text">
+            <p>Powered BY YouYaX<br>MoMoCMS，更好用的企业建站系统</p>
+        </div>
+    </div>
 </footer>
 </body></html>

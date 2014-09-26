@@ -3,5 +3,5 @@
  */
 
 $(function(){
-    $("header").load("renderHeader.action");
+    //$("header").load("renderHeader.action");
 });
