@@ -2,6 +2,7 @@ package com.xiaohao.cms.controller;
 
 import com.xiaohao.cms.model.Pages;
 import com.xiaohao.cms.model.PagesExample;
+import com.xiaohao.cms.model.ProductSub;
 import org.codehaus.jackson.map.deser.ValueInstantiators;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import org.springframework.web.util.HtmlUtils;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.util.List;
 
 /**
  * Created by xiaohao on 2014/9/25.

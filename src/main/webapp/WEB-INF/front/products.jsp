@@ -253,13 +253,16 @@
                     <p></p>
                     <ul style="margin:0;padding:0;display:table;width:100%;">
 
-                        <li style="width:200px;height:150px;float:left;list-style-type:none;text-align:center;margin-left:7px;margin-bottom:20px;">
-                            <a href="showProduct.action">
-                                <img style="width:160px;" src="image/1407997819_0.jpg" border="0">
+                        <c:forEach items="" varStatus="" var="">
+                            <li style="width:200px;height:150px;float:left;list-style-type:none;text-align:center;margin-left:7px;margin-bottom:20px;">
+                                <a href="showProduct.action">
+                                    <img style="width:160px;" src="image/1407997819_0.jpg" border="0">
 
-                                <div style="text-align:center;height:20px;">华硕笔记本</div>
-                            </a>
-                        </li>
+                                    <div style="text-align:center;height:20px;">华硕笔记本</div>
+                                </a>
+                            </li>
+                        </c:forEach>
+
 
                     </ul>
                     <div style="text-align:center"><a href="http://lvyou.amdiaosi.com/list.php?id=7">上一页</a>&nbsp;<a
