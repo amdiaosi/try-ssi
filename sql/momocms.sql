@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `t_access_log` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
   `ip` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `time` int(4) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `time` bigint (12) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -65,11 +65,11 @@ CREATE TABLE IF NOT EXISTS `t_admin` (
 CREATE TABLE IF NOT EXISTS `t_leave` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
   `user` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `con1` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `time1` int(4) NOT NULL,
+  `con1` text COLLATE utf8_unicode_ci NOT NULL,
+  `time1` bigint (4) NOT NULL,
   `admin` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `con2` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `time2` int(4) NOT NULL,
+  `con2` text COLLATE utf8_unicode_ci NOT NULL,
+  `time2` bigint (12) NOT NULL,
   `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `t_pages` (
   `content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `author` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `module` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `time` int(4) NOT NULL,
+  `time` bigint (12) NOT NULL,
   `sort` int(4) NOT NULL,
   `isProduct` tinyint(1) NOT NULL,
   `isMenu` tinyint(1) NOT NULL,
@@ -136,7 +136,7 @@ INSERT INTO `t_pages` (`id`, `title`, `content`, `author`, `module`, `time`, `so
 
 CREATE TABLE IF NOT EXISTS `t_product` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `sort` int(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
@@ -158,8 +158,8 @@ INSERT INTO `t_product` (`id`, `name`, `sort`) VALUES
 
 CREATE TABLE IF NOT EXISTS `t_product_sub` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `pic` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(124) COLLATE utf8_unicode_ci NOT NULL,
+  `pic` varchar(124) COLLATE utf8_unicode_ci NOT NULL,
   `category` int(4) NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `sort` int(4) NOT NULL,
