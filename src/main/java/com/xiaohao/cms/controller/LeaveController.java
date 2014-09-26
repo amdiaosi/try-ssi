@@ -11,6 +11,7 @@ public class LeaveController {
 
     @RequestMapping("/showLeave.action")
     public String showLeaveList(){
+
         return "/front/leave";
     }
 
