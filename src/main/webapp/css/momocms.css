@@ -146,7 +146,7 @@ text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
 position: relative;
 cursor: pointer;
 border: 1px solid #CCC !important;
-background: white url("../admin/img/btn-overlay.png") repeat-x !important;
+background: white url("../image/btn-overlay.png") repeat-x !important;
 }.box {
 padding: 8px;
 margin-bottom: 8px;
