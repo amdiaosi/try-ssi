@@ -13,14 +13,14 @@ public class LoginController {
     public String loginIndex(){
 
 
-        return "/admin/productAdminAd";
+        return "/admin/leaveReply";
     }
 
     @RequestMapping("/login.action")
     public String login(){
 
 
-        return "/admin/productAdminIndex";
+        return "/admin/leave";
     }
 
 }
