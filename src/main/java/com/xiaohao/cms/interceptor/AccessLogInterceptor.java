@@ -2,6 +2,7 @@ package com.xiaohao.cms.interceptor;
 
 import com.xiaohao.cms.model.AccessLog;
 import com.xiaohao.cms.service.CmsService;
+import com.xiaohao.cms.service.MQServcie;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +16,8 @@ public class AccessLogInterceptor implements HandlerInterceptor {
     private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
     private CmsService cmsService;
+
+    private MQServcie mqServcie;
 
     /**
      * 如果返回false 则另外两个重写的方法就不执行了哈
@@ -60,5 +63,13 @@ public class AccessLogInterceptor implements HandlerInterceptor {
 
     public void setCmsService(CmsService cmsService) {
         this.cmsService = cmsService;
+    }
+
+    public MQServcie getMqServcie() {
+        return mqServcie;
+    }
+
+    public void setMqServcie(MQServcie mqServcie) {
+        this.mqServcie = mqServcie;
     }
 }

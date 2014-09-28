@@ -102,6 +102,9 @@
                <property name="cmsService">
                    <ref bean="cmsService"></ref>
                </property>
+               <property name="mqServcie">
+                   <bean class="com.xiaohao.cms.service.MQServcie" init-method="init"></bean>
+               </property>
            </bean>
        </mvc:interceptor>
    </mvc:interceptors>
