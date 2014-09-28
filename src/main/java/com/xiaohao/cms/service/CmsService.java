@@ -119,6 +119,7 @@ public class CmsService extends BaseService {
     public List<Pages> queryPagesIsProduct(){
         PagesExample example = new PagesExample();
         example.createCriteria().andIsproductEqualTo(true);
+
         return pagesMapper.selectByExample(example);
     }
 
@@ -132,6 +133,7 @@ public class CmsService extends BaseService {
         example.createCriteria().andIsnewsEqualTo(true);
         LimitClause limitClause = new LimitClause(0,topN);
         example.setLimitClause(limitClause);
+        logger.info("调用查询topN新闻的方法：n="+topN);
         return pagesMapper.selectByExampleWithBLOBsLimit(example);
     }
 
@@ -143,6 +145,7 @@ public class CmsService extends BaseService {
         ProductSubExample example = new ProductSubExample();
         //这里数据库需要添加标记首页推荐的商品标示
         //example.createCriteria().andCategoryBetween("");
+        logger.info("调用查询首页滚动商品");
         return productSubMapper.selectByExample(example);
     }
 
@@ -156,7 +159,7 @@ public class CmsService extends BaseService {
 
         example.createCriteria().andStatusEqualTo(true);
         example.setOrderByClause("id desc");
-
+        logger.info("查询留言列表");
         return leaveMapper.selectByExampleWithBLOBs(example);
     }
 
