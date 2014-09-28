@@ -146,6 +146,21 @@ public class CmsService extends BaseService {
         return productSubMapper.selectByExample(example);
     }
 
+    /**
+     * 查询正常状态的留言
+     * @return
+     */
+    public List<LeaveWithBLOBs> queryLeaveRightStatus(){
+
+        LeaveExample example = new LeaveExample();
+
+        example.createCriteria().andStatusEqualTo(true);
+        example.setOrderByClause("id desc");
+
+        return leaveMapper.selectByExampleWithBLOBs(example);
+    }
+
+
 
 
 }

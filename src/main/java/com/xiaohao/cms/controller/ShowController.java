@@ -23,7 +23,7 @@ public class ShowController extends BaseController {
     private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
     @RequestMapping("/show.action")
-    public String show(@RequestParam Integer id, Model modelAndView) {
+    public String show(@RequestParam Integer id,@RequestParam Integer cateId, Model modelAndView) {
 
         logger.info("show.action  id:" + id);
 
@@ -36,19 +36,38 @@ public class ShowController extends BaseController {
         if (pages != null) {
             String nContent = HtmlUtils.htmlUnescape(pages.getContent());
             pages.setContent(nContent);
-            if (pages.getIsnews()) {
-                return "front/news";
-            }
-            if (pages.getIsproduct() && pages.getIsmenu()) {
-                //查询全部商品list
-                return "front/products";
-            }
-            if (pages.getIsmenu()) {
 
-            }
-            if (pages.getIssecondarymenu()) {
+            if(pages.getModule()!=null&&!"".equals(pages.getContent())){
+                if("P".equals(pages.getModule())){
+                    //产品列表
+                    if(cateId!=null){
 
+                    }
+
+
+
+                }else if("L".equals(pages.getModule())){
+                    //留言列表
+
+
+                }else if("N".equals(pages.getModule())){
+                    //新闻列表
+
+
+                }
+            }else{
+                if(pages.getIsnews()){
+                    //新闻单页
+
+                }else if(pages.getIssecondarymenu()){
+                    //取得上级分类
+                    //查询出pages对象就好了
+
+                }
             }
+
+
+
         }
         return "";
     }
