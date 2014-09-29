@@ -59,7 +59,9 @@ public class ShowController extends BaseController {
 
                 }else if("L".equals(pages.getModule())){
                     //留言列表
-
+                    List<LeaveWithBLOBs> list =cmsService.queryLeaveRightStatus();
+                    modelAndView.addAttribute("leaveList",list);
+                    return "front/leave";
                 }else if("N".equals(pages.getModule())){
                     //新闻列表
                     List<Pages> pageses =cmsService.queryPagesNewsTopN(5);
