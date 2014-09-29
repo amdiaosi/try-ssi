@@ -1,6 +1,8 @@
 package com.xiaohao.cms.service;
 
 /**
+ * 定义队列数据处理器 需要实现disruptor的Eventhandler接口
+ *
  * Created by xiaohao on 2014/9/28.
  */
 import com.lmax.disruptor.EventHandler;

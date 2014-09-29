@@ -1,9 +1,8 @@
 package com.xiaohao.cms.MQ;
 
-import com.lmax.disruptor.EventHandler;
-import com.xiaohao.cms.service.MQHandler;
-
 /**
+ * 基本上就是用来包裹 队列的数据
+ *
  * Created by xiaohao on 2014/9/28.
  */
 public class MQLogEvent<T> {
