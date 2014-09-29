@@ -94,7 +94,9 @@
             </list>
         </property>
     </bean>
+   <bean id="mqService" init-method="init" class="com.xiaohao.cms.service.MQServcie">
 
+   </bean>
    <mvc:interceptors>
        <mvc:interceptor>
            <mvc:mapping path="/*.action"/>
@@ -103,7 +105,7 @@
                    <ref bean="cmsService"></ref>
                </property>
                <property name="mqServcie">
-                   <bean class="com.xiaohao.cms.service.MQServcie" init-method="init"></bean>
+                <ref bean="mqService"></ref>
                </property>
            </bean>
        </mvc:interceptor>
