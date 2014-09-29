@@ -173,9 +173,28 @@ public class CmsService extends BaseService {
         return productSubMapper.selectByExampleWithBLOBs(example);
     }
 
+    /**
+     * 根据产品id查询产品
+     * @param id
+     * @return
+     */
     public ProductSub queryProductById(Integer id){
         return productSubMapper.selectByPrimaryKey(id);
     }
 
+    /**
+     * 查询产品列表 每一页10个
+     * @param pageIndex 页码
+     * @param cateId 分类id
+     * @return
+     */
+    public List<ProductSub> queryProductSubByPage(Integer pageIndex,Integer cateId){
+        ProductSubExample example = new ProductSubExample();
+        if(cateId!=null){
+            example.createCriteria().andCategoryEqualTo(cateId);
+        }
+        example.setLimitClause(new LimitClause(pageIndex,10));
+        return productSubMapper.selectByExampleWithBLOBsLimit(example);
+    }
 
 }

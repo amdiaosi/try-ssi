@@ -1,5 +1,7 @@
 package com.xiaohao.cms.mapper;
 
+import com.xiaohao.cms.model.Pages;
+import com.xiaohao.cms.model.PagesExample;
 import com.xiaohao.cms.model.ProductSub;
 import com.xiaohao.cms.model.ProductSubExample;
 import java.util.List;
@@ -117,4 +119,11 @@ public interface ProductSubMapper {
      * @mbggenerated Fri Sep 26 10:03:16 CST 2014
      */
     int updateByPrimaryKey(ProductSub record);
+
+    /**
+     * 添加分页条件的查询
+     * @param example
+     * @return
+     */
+    List<ProductSub> selectByExampleWithBLOBsLimit(ProductSubExample example);
 }

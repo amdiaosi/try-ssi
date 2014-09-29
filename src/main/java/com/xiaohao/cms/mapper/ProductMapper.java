@@ -1,5 +1,7 @@
 package com.xiaohao.cms.mapper;
 
+import com.xiaohao.cms.model.Pages;
+import com.xiaohao.cms.model.PagesExample;
 import com.xiaohao.cms.model.Product;
 import com.xiaohao.cms.model.ProductExample;
 import java.util.List;
@@ -93,4 +95,5 @@ public interface ProductMapper {
      * @mbggenerated Fri Sep 26 10:03:16 CST 2014
      */
     int updateByPrimaryKey(Product record);
+
 }

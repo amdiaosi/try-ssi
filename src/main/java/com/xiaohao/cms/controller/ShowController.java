@@ -1,5 +1,6 @@
 package com.xiaohao.cms.controller;
 
+import com.xiaohao.cms.model.LeaveWithBLOBs;
 import com.xiaohao.cms.model.Pages;
 import com.xiaohao.cms.model.PagesExample;
 import com.xiaohao.cms.model.ProductSub;
@@ -37,7 +38,7 @@ public class ShowController extends BaseController {
             String nContent = HtmlUtils.htmlUnescape(pages.getContent());
             pages.setContent(nContent);
 
-            if(pages.getModule()!=null&&!"".equals(pages.getContent())){
+            if(pages.getModule()!=null&&!"".equals(pages.getModule())){
                 if("P".equals(pages.getModule())){
                     //产品列表
                     if(cateId!=null){
@@ -59,20 +60,21 @@ public class ShowController extends BaseController {
                 }else if("L".equals(pages.getModule())){
                     //留言列表
 
-
                 }else if("N".equals(pages.getModule())){
                     //新闻列表
-
+                    List<Pages> pageses =cmsService.queryPagesNewsTopN(5);
+                    modelAndView.addAttribute("newsList",pageses);
+                    return "front/newsList";
 
                 }
             }else{
                 if(pages.getIsnews()){
                     //新闻单页
-
+                    return "front/news";
                 }else if(pages.getIssecondarymenu()){
                     //取得上级分类
                     //查询出pages对象就好了
-
+                    return "front/news";
                 }
             }
 
