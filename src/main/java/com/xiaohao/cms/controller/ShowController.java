@@ -23,7 +23,7 @@ public class ShowController extends BaseController {
     private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
     @RequestMapping("/show.action")
-    public String show(@RequestParam Integer id,@RequestParam Integer cateId, Model modelAndView) {
+    public String show(@RequestParam Integer id,@RequestParam(required = false) Integer cateId,@RequestParam(required = false) Integer sId,Model modelAndView) {
 
         logger.info("show.action  id:" + id);
 
@@ -41,7 +41,17 @@ public class ShowController extends BaseController {
                 if("P".equals(pages.getModule())){
                     //产品列表
                     if(cateId!=null){
+                        if(-1!=cateId){
+                            List<ProductSub> productSubs =cmsService.queryProductListByCate(cateId);
+                            modelAndView.addAttribute("productList",productSubs);
+                            return "front/products";
+                        }
 
+                    }
+                    if(sId!=null){
+                        ProductSub productSub =cmsService.queryProductById(sId);
+                        modelAndView.addAttribute("product",productSub);
+                        return "front/product";
                     }
 
 

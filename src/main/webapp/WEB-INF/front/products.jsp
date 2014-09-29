@@ -253,10 +253,10 @@
                     <p></p>
                     <ul style="margin:0;padding:0;display:table;width:100%;">
 
-                        <c:forEach items="" varStatus="" var="">
+                        <c:forEach items="" varStatus="productList" var="p">
                             <li style="width:200px;height:150px;float:left;list-style-type:none;text-align:center;margin-left:7px;margin-bottom:20px;">
-                                <a href="showProduct.action">
-                                    <img style="width:160px;" src="image/1407997819_0.jpg" border="0">
+                                <a href="show.action?id=${7}&sid=${p.id}">
+                                    <img style="width:160px;" src="${p.pic}" border="0">
 
                                     <div style="text-align:center;height:20px;">华硕笔记本</div>
                                 </a>

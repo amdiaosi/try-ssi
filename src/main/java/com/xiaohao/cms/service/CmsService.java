@@ -119,7 +119,6 @@ public class CmsService extends BaseService {
     public List<Pages> queryPagesIsProduct(){
         PagesExample example = new PagesExample();
         example.createCriteria().andIsproductEqualTo(true);
-
         return pagesMapper.selectByExample(example);
     }
 
@@ -163,7 +162,20 @@ public class CmsService extends BaseService {
         return leaveMapper.selectByExampleWithBLOBs(example);
     }
 
+    /**
+     * 按照指定的分类查询商品
+     * @param cateId
+     * @return
+     */
+    public List<ProductSub> queryProductListByCate(Integer cateId){
+        ProductSubExample example = new ProductSubExample();
+        example.createCriteria().andCategoryEqualTo(cateId);
+        return productSubMapper.selectByExampleWithBLOBs(example);
+    }
 
+    public ProductSub queryProductById(Integer id){
+        return productSubMapper.selectByPrimaryKey(id);
+    }
 
 
 }

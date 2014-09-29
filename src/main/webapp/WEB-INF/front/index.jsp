@@ -46,13 +46,13 @@
             <ul class="list-none">
                 <c:forEach items="${rootMenus}" var="m">
                     <li style="width:124px;" class="">
-                        <a class="active" href="http://lvyou.amdiaosi.com/index.php"><span>
-                       <c:out value="${m.title}"></c:out></span></a>
+                        <a class="active" href="show.action?id=${m.id}&cateId=-1"><span>
+                        <c:out value="${m.title}"></c:out></span></a>
 
                         <dl style="width: 124px;">
                             <c:if test="${m.isproduct}">
                                 <c:forEach items="${products}" var="s">
-                                    <dd><a href="show.action?id=<c:out value="${s.id}"></c:out>"><c:out value="${s.name}"></c:out></a></dd>
+                                    <dd><a href="show.action?id=${m.id}&cateId=${s.id}"><c:out value="${s.name}"></c:out></a></dd>
                                 </c:forEach>
                             </c:if>
                             <c:if test="${!m.isproduct}">
