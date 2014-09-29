@@ -94,6 +94,7 @@
             </list>
         </property>
     </bean>
+    <!--定义使用异步服务的日志操作服务-->
    <bean id="mqService" init-method="init" class="com.xiaohao.cms.service.MQServcie">
 
    </bean>
