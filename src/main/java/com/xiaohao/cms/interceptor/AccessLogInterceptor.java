@@ -15,7 +15,6 @@ public class AccessLogInterceptor implements HandlerInterceptor {
 
     private org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
-    private CmsService cmsService;
 
     private MQServcie mqServcie;
 
@@ -55,14 +54,6 @@ public class AccessLogInterceptor implements HandlerInterceptor {
         if(ex!=null){
 
         }
-    }
-
-    public CmsService getCmsService() {
-        return cmsService;
-    }
-
-    public void setCmsService(CmsService cmsService) {
-        this.cmsService = cmsService;
     }
 
     public MQServcie getMqServcie() {

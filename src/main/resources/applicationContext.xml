@@ -98,13 +98,12 @@
    <bean id="mqService" init-method="init" class="com.xiaohao.cms.service.MQServcie">
 
    </bean>
+
+    <!--定义springMVC拦截器 给拦截器注入mqService来处理请求日志-->
    <mvc:interceptors>
        <mvc:interceptor>
            <mvc:mapping path="/*.action"/>
            <bean name="myInterceptor" class="com.xiaohao.cms.interceptor.AccessLogInterceptor">
-               <property name="cmsService">
-                   <ref bean="cmsService"></ref>
-               </property>
                <property name="mqServcie">
                 <ref bean="mqService"></ref>
                </property>

@@ -24,7 +24,7 @@ public class MQServcie {
     @Resource(name = "eventHandler")
     MQHandler mqHandler;
 
-    private int bufferSize = 8192;
+    private int bufferSize = 2048;
 
     private Disruptor<MQLogEvent> disruptor;
 
